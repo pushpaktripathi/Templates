@@ -2,150 +2,136 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilroy;
 }
 
-html,body{
+html, body{
     height: 100%;
     width: 100%;
+    
 }
 
 #main{
     height: 100%;
     width: 100%;
-    background-color: #d0d4d5;
+    /*background-color: red;*/
     position: relative;
-}
-
-#nav{
-    height: 90px;
-    padding: 0 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#nav img{
-    height: 40px;
-    margin-right: 170px;
-}
-
-#nav-part1{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#nav-part1 h4{
-    margin-right: 60px;
-    font-size: 19px;
-    text-transform: uppercase;
-    font-weight: 600;
+#main img{
+    height: 700px;   
+    width: 510;
+    align-items: center;
+    position: relative;
+    z-index: 99;
 }
 
-#nav-part2 i{
-    margin-right: 60px;
-    font-size: 21px;
-    font-weight: 500px;
-}
-
-#content{
-    height: calc(100% - 100px);
+#scroll-div{
+    position: absolute;
+    top: 24%;
     width: 100%;
-    position: relative;
-    display: flex;
-}
-
-#left{
-    width: 35%;
     height: 100%;
-    padding: 40px 120px;
-}
-
-#left h5{
-    font-size: 20px;
-    margin-bottom: 18px;
-    color: #535353;
-}
-
-#left h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    margin-bottom: 35px;
-    line-height: 55px;
-    text-transform: uppercase;
-}
-
-#left p{
-    font-size: 12px;
-    margin-bottom: 40px;
-    width: 70%;
-
-}
-
-#left button{
-    background-color: #000000;
-    color: #fff;
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 15px 40px;
-    border-radius: 50px;
-    border-top-left-radius: 0;
-}
-
-#right{
-    width: 65%;
-    height: 100%;
-    /*background-color: red;*/
-    position: relative;
-    padding: 150px;
     white-space: nowrap;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
-
-#right::-webkit-scrollbar{
+#scroll-div::-webkit-scrollbar{
     display: block;
 }
-
-.elem{
-    height: 500px;
-    width: 360px;
-    background-color: #fff;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgb(0, 0, 0.3);
-    margin-right: 30px;
+#scroll-div h1{
     display: inline-block;
+    font-size: 160px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    font-family: Franklin Gothic Heavy;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.elem img{
-    height: 50%;
-    width: 70%;
-    top: 6%;
-    object-fit: cover;
+#scroll-div2{
     position: absolute;
-    
+    top: 44%;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 100;
+}
+#scroll-div2::-webkit-scrollbar{
+    display: block;
+}
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 160px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    color: transparent;
+    font-family: Franklin Gothic Heavy;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
 
-.elem h4{
+
+#scroll-div3{
     position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #d0d4d5;
-    padding: 14px 32px;
-    border-radius: 6px;
+    top: 64%;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll-div3::-webkit-scrollbar{
+    display: block;
+}
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 160px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    font-family: Franklin Gothic Heavy;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+
 }
 
-.elem h5{
+#text{
+    font-size: 40px;
     position: absolute;
-    bottom: 10%;
-    right: 0;
-    background-color: #000506;
-    color: #fff;
-    font-weight: 500;
-    font-size: 12px;
-    padding: 14px 32px;
-    border-radius: 6px;
+    font-family: Franklin Gothic Heavy;
+    width: 60%;
+    /*background-color: #f70606;*/
+    z-index: 999;
+    top: 16%;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(calc(-100% - 35px));
+        
+
+    }
+    100%{
+        transform: translateX(calc(-100% - 35px));
+        transform: translateX(0);
+    }
 }
